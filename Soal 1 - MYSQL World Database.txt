@@ -1,0 +1,28 @@
+query 
+Soal 1 - MySQL World Database
+
+1. -> select * from city where Name IN('Jakarta','Surabaya','Bandung','Medan','Palembang',
+'Tangerang','Semarang','Ujung Pandang','Malang','Bandar Lampung');
+
+2. -> select * from city where Population > 8008277 ORDER BY population DESC;
+
+3. -> select * from country where IndepYear IN (-1523,-660,800,843,885,1066,1143,1278) 
+ORDER BY IndepYear asc;
+
+4. -> select Continent, count(Continent) as jumlah_negara, sum(Population) as Population, avg(LifeExpectancy) as RataAngkaHarapanHidup from country where Population > 0 group by continent;
+
+5. -> create view detail_negara as 
+-> select * from detail_negara where Name IN('Macao','Japan','Singapore','Hong Kong','Israel','Jordan','Cyprus','Taiwan','Kuwait') ORDER BY LifeExpectancy DESC;
+
+
+6.  create view  detail_language as
+-> select * from countrylanguage where CountryCode IN('BMU','IRL','GBR','GIB','NZL'.
+'USA','VIR','AUS','CAN','BLZ');
+-> select * from detail_language where language="English" ORDER BY percentage DESC;
+ 
+7. -> select country.Name, country.Population, country.GNP, city.Name, city.Population as capPopulation from country, city where country.Capital = city.ID and country.Region='Southeast Asia';
+
+8. -> select country.Name, country.Population, country.GNP, city.Name, city.Population as capPopulation from country, city where country.Capital = city.ID and country.Name in('Argentina','Australia','Brazil','Canada','China','Germany','India','Indonesia','Japan','Mexico','Russian Federation','Saudi Arabia','South Africa','South Korea','Turkey','United Kingdom','United States');
+   
+
+
